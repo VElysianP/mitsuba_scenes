@@ -6,6 +6,13 @@ Welcome! Here are several rendering scenes for [Mitsuba renderer](https://www.mi
 From paper: BSDF Importance Baking: A Lightweight Neural Solution to Importance Sampling General Parametric BSDFs
 ![layered kitchen](layered_kitchen\layered_kitchen_GT.png)
 
+### [Leaves Status](leaves_status) 
+From paper: BSDF Importance Baking: A Lightweight Neural Solution to Importance Sampling General Parametric BSDFs
+![Leaves Status](leaves_status\leaves_GT.png)
+
+### [Green Window](GreenWindow) 
+![GreenWindow](GreenWindow\window_green.png)
+
 ### [Glass Chandelier livingroom](glassChandelier_livingroom) 
 From paper: Neural complex luminaires: representation and rendering
 ![glassChandelier](glassChandelier_livingroom\env_glassChandelier.png)
@@ -32,10 +39,13 @@ From paper: Neural complex luminaires: representation and rendering
 ![Featherlum](bedroom_featherlum\feather_lum_only_1k.png)
 ![Bedroom Featherlum](bedroom_featherlum\bdpt4k.png)
 
+## Note
+I would appreciate it if you cite this when using the scenes:
 
+```bibtex
 @misc{mitsuba_scenes,
-   Author = {Yaoyi Bai},
-   Year = {2025},
-   Note = {https://github.com/VElysianP/mitsuba_scenes},
-   Title = {Rendering resources}
-} 
+   author = {Yaoyi Bai},
+   year = {2025},
+   note = {https://github.com/VElysianP/mitsuba_scenes},
+   title = {Rendering Resources}
+}
