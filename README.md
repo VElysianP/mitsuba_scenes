@@ -6,16 +6,27 @@ Welcome! Here are several rendering scenes for [Mitsuba renderer](https://www.mi
 From paper: BSDF Importance Baking: A Lightweight Neural Solution to Importance Sampling General Parametric BSDFs
 ![layered kitchen](layered_kitchen/layered_kitchen_GT.png)
 
+### [Shelf Conductor](shelf_conductor) 
+From paper: BSDF Importance Baking: A Lightweight Neural Solution to Importance Sampling General Parametric BSDFs
+
+![Shelf Conductor](shelf_conductor/all_shelf_mixrough_MIS2048.png)
+
 ### [Leaves Status](leaves_status) 
 From paper: BSDF Importance Baking: A Lightweight Neural Solution to Importance Sampling General Parametric BSDFs
+
 ![Leaves Status](leaves_status/leaves_GT.png)
 
-### [Green Window](GreenWindow) 
-![GreenWindow](GreenWindow/window_green.png)
+### [Layered Shoes](layered_shoes) 
+From paper: BSDF Importance Baking: A Lightweight Neural Solution to Importance Sampling General Parametric BSDFs
+
+![layered_shoes](layered_shoes/layered_shoes_ref4096.png)
+
 
 ### [Glass Chandelier livingroom](glassChandelier_livingroom) 
 From paper: Neural complex luminaires: representation and rendering
+
 ![glassChandelier](glassChandelier_livingroom/env_glassChandelier.png)
+
 ![glassChandelier livingroom](glassChandelier_livingroom/livingroom_glassChandelier_specular_4k.png)
 
 ### [Flower Bedroom](flower_bedroom) 

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.5.0">
+	<integrator type="path">
+		<integer name="maxDepth" value="4"/>
+		<integer name="rrDepth" value="20"/>
+	</integrator>
+
+	<sensor type="perspective">
+		<string name="fovAxis" value="smaller"/>
+		<transform name="toWorld">
+			<lookAt origin="-12 36 52" target="-12 18 23" up="0 1 0"/>
+		</transform>
+		<float name="fov" value="35"/>
+		<sampler type="independent">
+			<integer name="sampleCount" value="64"/>
+		</sampler>
+		<film id="film" type="hdrfilm">
+            <boolean name="banner" value="false" />
+			<!-- full -->
+			<integer name="width" value="960"/>
+			<integer name="height" value="720"/>
+		</film>
+	</sensor>	
+
+	<emitter type="envmap" id="env-light">
+		<string name="filename" value="envmaps/studio_country_hall_1k.exr"/>
+		<transform name="toWorld">
+			<rotate y="1" angle="-90"/>
+		</transform>
+		<float name="scale" value="1.5"/>
+	</emitter>
+
+	<shape id="back" type="obj">
+		<string name="filename" value="scene/back.obj"/>
+		<bsdf type="roughconductor">
+			<float name = "alpha" value = "0.2"/>
+			<string name = "material" value = "Ag"/>
+		</bsdf>
+	</shape>	
+
+	<shape id="layered" type="obj">
+		<string name="filename" value="scene/layered.obj"/>
+		<bsdf type="diffuse">
+		</bsdf>
+	</shape>	
+
+	<shape id="leather" type="obj">
+		<string name="filename" value="scene/leather.obj"/>
+		<bsdf type="roughplastic">
+			<float name = "alpha" value = "0.2"/>
+			<rgb name = "diffuseReflectance" value = "0.0 0.0 0.0"/>
+		</bsdf>
+	</shape>	
+
+	<shape id="mat" type="obj">
+		<string name="filename" value="scene/mat.obj"/>
+		<bsdf type="roughplastic">
+			<float name = "alpha" value = "0.08"/>
+			<rgb name = "diffuseReflectance" value = "0.7372549  0.64705882 0.56470588"/>
+		</bsdf>
+	</shape>	
+
+	<shape id="wooden" type="obj">
+		<string name="filename" value="scene/wooden.obj"/>
+		<bsdf type="roughplastic">
+			<float name = "alpha" value = "0.2"/>
+			<rgb name = "diffuseReflectance" value = "0.0 0.0 0.0"/>
+		</bsdf>
+	</shape>	
+
+</scene>
+
