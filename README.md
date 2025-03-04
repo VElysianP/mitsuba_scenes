@@ -1,6 +1,16 @@
 # Mitsuba Scenes
+by Yaoyi Bai
 
-Welcome! Here are several rendering scenes for [Mitsuba renderer](https://www.mitsuba-renderer.org/)!
+Welcome! Here are several rendering scenes for [Mitsuba renderer](https://www.mitsuba-renderer.org/)! Please feel free to use them, and I would appreciate it if you cite this when using the scenes:
+
+```bibtex
+@misc{mitsuba_scenes,
+   author = {Yaoyi Bai},
+   year = {2025},
+   note = {https://github.com/VElysianP/mitsuba_scenes},
+   title = {Rendering Resources}
+}
+```
 
 ### [Layered Kitchen](layered_kitchen) 
 From paper: BSDF Importance Baking: A Lightweight Neural Solution to Importance Sampling General Parametric BSDFs
@@ -49,14 +59,3 @@ From paper: Neural complex luminaires: representation and rendering
 From paper: Neural complex luminaires: representation and rendering
 ![Featherlum](bedroom_featherlum/feather_lum_only_1k.png)
 ![Bedroom Featherlum](bedroom_featherlum/bdpt4k.png)
-
-## Note
-I would appreciate it if you cite this when using the scenes:
-
-```bibtex
-@misc{mitsuba_scenes,
-   author = {Yaoyi Bai},
-   year = {2025},
-   note = {https://github.com/VElysianP/mitsuba_scenes},
-   title = {Rendering Resources}
-}
