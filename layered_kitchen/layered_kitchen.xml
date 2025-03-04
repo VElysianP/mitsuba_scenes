@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.5.0" >
+	<integrator type="path">
+		<integer name = "maxDepth" value = "4"/>
+	</integrator>
+	<!-- <integrator type="BSDFSamplingOnly">
+		<integer name = "maxDepth" value = "4"/>
+		<boolean name="strictNormals" value="true" />
+	</integrator> -->
+
+	<sensor type="perspective" >
+		<float name="fov" value="45" />
+		<transform name="toWorld">
+			<lookat origin="-130 28 -5" target="1 28 -5" up="0, 1, 0"/> 
+        </transform>
+		<sampler type="ldsampler" >
+			<integer name="sampleCount" value="256" />
+		</sampler>
+		<film type="hdrfilm" id="film">
+			<integer name="width" value="1080" />
+			<integer name="height" value="720" />
+			<string name="pixelFormat" value="rgb"/>
+			<boolean name="banner" value="false"/>
+			<rfilter type="box"/>
+		</film>
+	</sensor>
+
+	<emitter type="envmap" id="env-light">
+		<string name="filename" value="envmaps/studio_country_hall_1k.exr"/>
+		<transform name="toWorld">
+			<rotate y="1" angle="0"/>
+		</transform>
+		<float name="scale" value="1"/>
+	</emitter>
+
+	<shape id="back" type="obj">
+		<string name="filename" value="scene/back.obj"/>
+		<bsdf type="diffuse">
+			<texture name="diffuseReflectance" type="bitmap">
+				<string name="filename" value="textures/beton.jpg"/>
+			</texture>
+		</bsdf>
+	</shape>
+
+	<shape id="box" type="obj">
+		<string name="filename" value="scene/box.obj"/>
+		<bsdf type="roughplastic">
+			<float name = "alpha" value = "0.2"/>
+			<texture name="diffuseReflectance" type="bitmap">
+				<string name="filename" value="textures/Wood doska.jpg"/>
+			</texture>
+		</bsdf>
+	</shape>
+
+	<shape id="branches" type="serialized">
+		<string name="filename" value="scene/branches.serialized"/>
+		<bsdf type="diffuse">
+			<texture name="diffuseReflectance" type="bitmap">
+				<string name="filename" value="textures/wooood.jpg"/>
+			</texture>
+		</bsdf>
+	</shape>
+
+	<shape id="carpet" type="obj">
+		<string name="filename" value="scene/carpet.obj"/>
+		<bsdf type="diffuse">
+			<texture name="diffuseReflectance" type="bitmap">
+				<string name="filename" value="textures/kovrik.jpg"/>
+			</texture>
+		</bsdf>
+	</shape>
+
+	<shape id="corner" type="obj">
+		<string name="filename" value="scene/corner.obj"/>
+		<bsdf type="roughplastic">
+			<float name = "alpha" value = "0.1"/>
+			<texture name="diffuseReflectance" type="bitmap">
+				<string name="filename" value="textures/marblesdfs.jpg"/>
+			</texture>
+		</bsdf>
+	</shape>
+
+	<shape id="cup1" type="obj">
+		<string name="filename" value="scene/cup1.obj"/>
+		<bsdf type="diffuse"/>
+	</shape>
+
+	<shape id="cup2" type="obj">
+		<string name="filename" value="scene/cup2.obj"/>
+		<bsdf type="diffuse"/>
+	</shape>
+	
+	<shape id="frames" type="obj">
+		<string name="filename" value="scene/frames.obj"/>
+		<bsdf type="roughplastic">
+			<float name = "alpha" value = "0.2"/>
+			<texture name="diffuseReflectance" type="bitmap">
+				<string name="filename" value="textures/wood polka.jpg"/>
+			</texture>
+		</bsdf>
+	</shape>
+
+	<shape id="hanger" type="obj">
+		<string name="filename" value="scene/hanger.obj"/>
+		<bsdf type="roughconductor">
+			<rgb name = "specularReflectance" value = "0.1, 0.1, 0.1"/>
+			<float name = "alpha" value = "0.08"/>
+		</bsdf>
+	</shape>
+
+	<shape id="jar" type="serialized">
+		<string name="filename" value="scene/jar.serialized"/>
+		<bsdf type="diffuse"/>
+	</shape>
+
+	<shape id="lemon" type="serialized">
+		<string name="filename" value="scene/lemon.serialized"/>
+		<bsdf type="roughplastic">
+			<float name = "alpha" value = "0.2"/>
+			<texture name="diffuseReflectance" type="bitmap">
+				<string name="filename" value="textures/lemon.jpg"/>
+			</texture>
+		</bsdf>
+	</shape>
+
+	<shape id="painting1" type="obj">
+		<string name="filename" value="scene/painting1.obj"/>
+		<bsdf type="diffuse">
+			<texture name="diffuseReflectance" type="bitmap">
+				<string name="filename" value="textures/HM3-1.jpg"/>
+				<float name = "uscale" value = "0.5"/>
+				<float name = "vscale" value = "-1"/>
+				<float name = "uoffset" value = "0.5"/>
+			</texture>
+		</bsdf>
+	</shape>
+
+	<shape id="painting2" type="obj">
+		<string name="filename" value="scene/painting2.obj"/>
+		<bsdf type="diffuse">
+			<texture name="diffuseReflectance" type="bitmap">
+				<string name="filename" value="textures/HM3-1.jpg"/>
+				<float name = "uscale" value = "0.5"/>
+				<float name = "vscale" value = "-1"/>
+			</texture>
+		</bsdf>
+	</shape>
+
+	<shape id="plate1" type="obj">
+		<string name="filename" value="scene/plate1.obj"/>
+		<bsdf type="diffuse"/>
+	</shape>
+	
+	<shape id="plate2" type="obj">
+		<string name="filename" value="scene/plate2.obj"/>
+		<bsdf type="diffuse"/>
+	</shape>
+
+	<shape id="shelf" type="obj">
+		<string name="filename" value="scene/shelf.obj"/>
+		<bsdf type="roughplastic">
+			<float name = "alpha" value = "0.1"/>
+			<texture name="diffuseReflectance" type="bitmap">
+				<string name="filename" value="textures/wood polka.jpg"/>
+			</texture>
+		</bsdf>
+	</shape>
+
+	<shape type="obj" id="spoons">
+		<string name="filename" value="scene/spoons.obj"/>
+		<bsdf type="roughconductor">
+			<string name = "material" value = "Ag"/>
+			<float name = "alphaU" value = "0.1"/>
+			<float name = "alphaV" value = "0.1"/>
+		</bsdf>
+	</shape>
+
+	<shape id="surface" type="obj">
+		<string name="filename" value="scene/surface.obj"/>
+		<bsdf type="roughplastic">
+			<float name = "alpha" value = "0.1"/>
+			<texture name="diffuseReflectance" type="bitmap">
+				<string name="filename" value="textures/marblesdfs.jpg"/>
+			</texture>
+		</bsdf>
+	</shape>
+</scene>
